@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * isLower - determine whether ascii is lowecase
+ * isLower - determine whether ascii is lowercase
  * @c: character
  * Returns: 1 if true, 0 if false
 */
