@@ -2,7 +2,7 @@
 
 /**
  *
- * _strncat -concatenates two strings using at most
+ * _strncat - concatenates two strings using at most
  * an inouted number of bytes from src
  *
  * @dest: the string to be appended upon
@@ -16,7 +16,7 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int c, i,
+	int c, i;
 
 	    c = 0;
 
