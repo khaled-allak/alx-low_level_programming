@@ -1,25 +1,27 @@
 #include "main.h"
+#include <ctype.h>
 #include <stdio.h>
 
 /**
- * isLower - determine whether ascii is lowercase
+ * islower - determine whether ASCII is lowercase
  * @c: character
  * Returns: 1 if true, 0 if false
 */
 
-int isLower(char c)
+int islower(char c)
 {
 	return (c >= 97 && c <= 122);
 }
 
 /**
- * isDelimiter - determines whether ascii is a delimiter
+ * isdelimiter - determines whether ascii is a delimiter
  * @c: character
  * Returns: 1 if true, 0 if false
 */
 
-int isDelimiter(char c)
+int isdelimiter(char c)
 {
+
 	int i;
 	char delimiter[] = "\t\n,.!?\"()[]";
 
@@ -38,19 +40,19 @@ int isDelimiter(char c)
 char *cap_string(char *s)
 {
 	char *ptr = s;
-	int foundDelimit = 1;
+	int founddelimit = 1;
 
 	while (*s)
 	{
-		if (isDelimiter(*s))
-			foundDelimit = 1;
-		else if (isLower(*s) && foundDelimit)
+		if (isdelimiter(*s))
+			founddelimit = 1;
+		else if (islower(*s) && founddelimit)
 		{
 			*s -= 32;
-			foundDelimit = 0;
+			founddelimit = 0;
 		}
 		else
-			foundDelimit = 0;
+			founddelimit = 0;
 		s++;
 	}
 	return (ptr);
