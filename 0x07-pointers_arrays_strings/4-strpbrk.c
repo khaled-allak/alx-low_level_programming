@@ -21,7 +21,7 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (accept[jj] == s[gr])
 			{
-				p = $s[gr];
+				p = &s[gr];
 				return (p);
 			}
 			jj++;
