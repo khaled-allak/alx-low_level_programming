@@ -36,13 +36,13 @@ int inception(char *s1, char *s2)
 }
 
 /**
- * wild - compares two strings
+ * wildcmp - compares two strings
  * @s1: the first string
  * @s2: the second string
  * Return: 1 if identical, 0 if not
 */
 
-int wild(char *s1, char *s2)
+int wildcmp(char *s1, char *s2)
 {
 	int ret = 0;
 
@@ -52,7 +52,7 @@ int wild(char *s1, char *s2)
 	{
 		if (!*s1)
 			return (1);
-		return (wild(s1 + 1, *s2 == '*' ? s2 : s2 + 1));
+		return (wildcmp(s1 + 1, *s2 == '*' ? s2 : s2 + 1));
 	}
 	if (!*s1 || !s2)
 		return (0);
@@ -62,7 +62,7 @@ int wild(char *s1, char *s2)
 		if (!*s2)
 			return (1);
 		if (*s1 == *s2)
-			ret += wild(s1 + 1, s2 + 1);
+			ret += wildcmp(s1 + 1, s2 + 1);
 		ret += inception(s1, s2);
 		return (!!ret);
 	}
