@@ -15,7 +15,7 @@ _listint(listint_t **head)
 	if (!head || !*head)
 		return (0);
 
-	node = (*head)-.next;
+	node = (*head)->next;
 	n = (*head)->n;
 	free(*head);
 	*head = node;
