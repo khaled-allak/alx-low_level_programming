@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * frree_listint - free a list of inits
+ * free_listint - free a list of inits
  * @head: pointer to the first node
  *
  * Return: void
