@@ -4,7 +4,7 @@
  * print_listint - print number of linked lists
  * @h: point to the first node
  *
- * Return: size of the list
+ * Return: number of nodes
 */
 
 size_t print_listint(const listint_t *h)
