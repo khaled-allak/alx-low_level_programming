@@ -3,8 +3,7 @@
 /**
  * print_listint - print number of linked lists
  * @h: point to the first node
- * @i: int
- *
+ * 
  * Return: number of nodes
 */
 
