@@ -8,7 +8,7 @@
  *
  * Return: number of bits to flip to convert numbers
 */
-unsigned int flip_bits(unsigned long int n, unsigned long int m);
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 
 unsigned long int xorval = n ^ m;
