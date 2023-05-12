@@ -27,13 +27,17 @@ int main(int ac, char **av)
 	to_fd = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
 	if (to_fd == -1)
 		dprintf(STDERR_FILENO, ERR_NOWRITE, av[2]), exit(99);
+
+	while ((b = read(from_fd, buf, READ_BUF_SIZE)) > 0)
+		if (write(to_fd, buf, b) != b)
+			dprintf(STDERR_FILENO, ERR_NOWRITE, av[1]), exit(98);
 	if (b == -1)
 		dprintf(STDERR_FILENO, ERR_NOREAD, av[1]), exit(98);
 
 	from_fd = close(from_fd);
 	to_fd = close(to_fd);
 	if (from_fd)
-		dprintf(STDERR_FILENO, ERR_NOCLOSE, from_fd_, exit(100);
+		dprintf(STDERR_FILENO, ERR_NOCLOSE, from_fd), exit(100);
 	if (to_fd)
 	dprintf(STDERR_FILENO, ERR_NOCLOSE, from_fd), exit(100);
 
