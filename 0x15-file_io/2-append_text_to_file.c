@@ -25,7 +25,7 @@ int _strlen(char *s)
  *
  * Return: 1 on success 0 on failure
 */
-int append_text_to_file(const char *filename, char *text_content);
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
 	ssize_t bytes = 0, len = _strlen(text_content);
