@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include "holberton.h"
 #include <math.h>
 /**
  * get_bit - Write a function that returns the value of a bit at a
